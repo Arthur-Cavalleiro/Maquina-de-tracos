@@ -2,7 +2,6 @@
 
 int fatorialMonolitico(int n) {
     if (n < 0) {
-        printf("Não é possível calcular o fatorial de um número negativo.\n");
         return -1;
     }
     
@@ -19,7 +18,6 @@ inicio:
 
 int fatorialIterativo(int n) {
     if (n < 0) {
-        printf("Não é possível calcular o fatorial de um número negativo.\n");
         return -1;
     }
     
@@ -32,7 +30,6 @@ int fatorialIterativo(int n) {
 
 int fatorialRecursivo(int n) {
     if (n < 0) {
-        printf("Não é possível calcular o fatorial de um número negativo.\n");
         return -1;
     }
     if (n == 0)
@@ -49,16 +46,6 @@ int main() {
     int fatorialMon = fatorialMonolitico(num);
     int fatorialIt = fatorialIterativo(num);
     int fatorialRec = fatorialRecursivo(num);
-
-    printf("Fatorial (monolítico): %d\n", fatorialMon);
-    printf("Fatorial (iterativo): %d\n", fatorialIt);
-    printf("Fatorial (recursivo): %d\n", fatorialRec);
-
-    if (fatorialMon == fatorialIt && fatorialIt == fatorialRec) {
-        printf("Os três métodos são equivalentes.\n");
-    } else {
-        printf("Os métodos não são equivalentes.\n");
-    }
 
     return 0;
 }
