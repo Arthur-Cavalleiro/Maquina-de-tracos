@@ -1,6 +1,11 @@
 #include <stdio.h>
 
 int fatorialMonolitico(int n) {
+    if (n < 0) {
+        printf("Não é possível calcular o fatorial de um número negativo.\n");
+        return -1;
+    }
+    
     int resultado = 1;
     int i = 1;
 
@@ -13,6 +18,11 @@ inicio:
 }
 
 int fatorialIterativo(int n) {
+    if (n < 0) {
+        printf("Não é possível calcular o fatorial de um número negativo.\n");
+        return -1;
+    }
+    
     int resultado = 1;
     for (int i = 1; i <= n; i++) {
         resultado *= i;
@@ -21,6 +31,10 @@ int fatorialIterativo(int n) {
 }
 
 int fatorialRecursivo(int n) {
+    if (n < 0) {
+        printf("Não é possível calcular o fatorial de um número negativo.\n");
+        return -1;
+    }
     if (n == 0)
         return 1;
     else
